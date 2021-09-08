@@ -7,6 +7,7 @@ public class FirstClass { // class name
 
     public static void main(String[] args){
         System.out.println("String hello world");
+        System.out.println("testprint");
     }
 
 }
