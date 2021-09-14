@@ -12,32 +12,17 @@ class FiboApp{
         int f1 = 5;
         int f2 = 6;
 
- //    run(n);
-//        run(start, n);
- //       run(f2, n);
+  //  run(n);
+       run(start, n);
+ //       run(f1, f2, n);
     }
 
     public static void run(int n){
-        int i;
-        for(i=2;i<n;++i)
-        {
-            n3=n1+n2;
-            System.out.print(" "+n3);
-            n1=n2;
-            n2=n3;
-        }
+       run(1,n);
     }
 
     public static void run (int start, int n){
-        n2 = start;
-        int i;
-        for (i = 1; i < n; ++i)
-        {
-            n3 = n1 + n2;
-            System.out.print(" " + n3);
-            n1 = n2;
-            n2 = n3;
-        }
+       run(0,start,n);
     }
 
     public static void run(int f1, int f2, int n) {
