@@ -12,20 +12,23 @@ class FiboApp{
         int f1 = 5;
         int f2 = 6;
 
-  //  run(n);
-       run(start, n);
- //       run(f1, f2, n);
+//       run(n);
+//       run(start, n);
+         run(f1, f2, n);
+        System.out.println(" returned " + n3);
     }
 
-    public static void run(int n){
+    public static int run(int n){
        run(1,n);
+       return n3;
     }
 
-    public static void run (int start, int n){
+    public static int run (int start, int n){
        run(0,start,n);
+       return n3;
     }
 
-    public static void run(int f1, int f2, int n) {
+    public static int run(int f1, int f2, int n) {
         n1 = f1;
         n2 = f2;
         System.out.print(n1 + " " + n2);
@@ -37,5 +40,6 @@ class FiboApp{
             n1 = n2;
             n2 = n3;
         }
+        return n3;
     }
 }

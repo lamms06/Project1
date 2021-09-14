@@ -8,7 +8,7 @@ public class PersonTest {
 
     @Test
     public void testPerson() throws Exception {
-        Person p = new Person("Jan", 130);
+        Person p = new Person("Jan", 120);
         System.out.println(p.getGender());
         p.setGender(Gender.MALE);
         System.out.println(p.getGender());
