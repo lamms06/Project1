@@ -1,20 +1,23 @@
 package org;
 
-import org.example.Gender;
 import org.example.Person;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class PersonTest {
 
     @Test
-    public void testPerson() throws Exception {
-        Person p = new Person("Jan", 120);
-        System.out.println(p.getGender());
-        p.setGender(Gender.MALE);
-        System.out.println(p.getGender());
-        p.haveBirthday(); // person gets one year older
-        System.out.println(p.getAge());
-        System.out.println(Person.universalRights);
+    public void testHaveBirthday_CorrectAge_Completes() throws Exception {
+       Person person = new Person("Stan",26);
+       person.haveBirthday();
+       assertEquals(person.getAge(), 27);
+    }
+
+    @Test(expected = Exception.class)
+    public void testHaveBirthday_TooOld_ThrowsException() throws Exception {
+        Person person = new Person("Stan",130);
+        person.haveBirthday();
     }
 
 }
