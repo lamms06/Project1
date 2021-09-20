@@ -57,4 +57,10 @@ public class BankAccountTest {
         assertEquals(target.getInterest(1), 100.05, 0);
     }
 
+    @Test
+    public void testToString(){
+        assertEquals(target.toString(),"Account 1234 has balance: 100");
+    }
+
+
 }

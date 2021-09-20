@@ -16,7 +16,7 @@ public class Exercise {
         row[2] = 3;
         long[] copy = row;
         copy[2]++;
-        System.out.println(copy[2]);
+        System.out.println(row[2]);
     }
 
     public void exerciseTwo(){
@@ -24,7 +24,7 @@ public class Exercise {
         row[2] = 3;
         long[] copy = row;
         copy[2]++;
-        System.out.println(copy[3]);
+        System.out.println(row[4]);
     }
 
 
