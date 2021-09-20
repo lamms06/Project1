@@ -1,6 +1,8 @@
 package h7;
 
 
+import java.util.Objects;
+
 public class Person {
     private String name;
     private int age;
@@ -30,5 +32,26 @@ public class Person {
     public int getAge() {
         return age;
     }
-}
 
+    @Override
+    public String toString(){
+        String x;
+        return (name+ " "+age+" is "+gender);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Person)){
+            return false;
+        }
+        Person person = (Person)obj;
+        return this.name.equals(person.name)
+                && (this.age == person.age)
+                && (this.gender == person.gender);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, gender);
+    }
+}
