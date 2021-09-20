@@ -1,13 +1,10 @@
 package org.h7;
 
-import h7.BankAccount;
+import h7h8.bank.BankAccount;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.mockito.Mock;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
 
 
 public class BankAccountTest {

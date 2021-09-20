@@ -1,7 +1,7 @@
 package org;
 
-import h7.Gender;
-import h7.Person;
+import h7h8.person.Gender;
+import h7h8.person.Person;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
