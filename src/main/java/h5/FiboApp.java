@@ -18,10 +18,17 @@ class FiboApp{
         System.out.println(" returned " + n3);
     }
 
-    public static int run(int n){
+//    public static long[] run(int n){
+//        //long[] array = new long[n];
+//
+//        //run(1,n);
+//        //return array;
+//    }
+
+   /* public static int run(int n){
        run(1,n);
        return n3;
-    }
+    }*/
 
     public static int run (int start, int n){
        run(0,start,n);

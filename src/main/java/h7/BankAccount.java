@@ -13,8 +13,8 @@ public class BankAccount {
      * @return the amount if withdrawal is permitted, 0 otherwise.
      */
     public int withdraw(int amount) {
-        if (this.balance - amount > 0) {
-            this.balance -= amount;
+        if (this.getBalance() - amount > 0) {
+            setBalance(-amount);
             return amount;
         } else {
             return 0;
@@ -42,6 +42,10 @@ public class BankAccount {
 
     public int getBalance() {
         return balance;
+    }
+
+    public void setBalance(int amount){
+       balance = getBalance() + amount;
     }
 
     public void setInterestRate(double interestRate) { this.interestRate = interestRate; }
