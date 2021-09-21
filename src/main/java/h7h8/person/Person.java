@@ -1,6 +1,5 @@
 package h7h8.person;
 
-
 import java.util.Objects;
 
 public class Person {
