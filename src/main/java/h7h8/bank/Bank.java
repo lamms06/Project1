@@ -13,8 +13,22 @@ public class Bank {
 
     }
 
-    public Bank(String eenName) {
-        this.name = eenName;
+    public Bank(String name) {
+        this(name,0,null);
+    }
+
+    public Bank(long id) {
+        this("", id,null);
+    }
+
+    public Bank(String name, long id){
+        this(name, id, null);
+    }
+
+    public Bank(String name, long id, List<BankAccount> accounts){
+        this.name = name;
+        this.id = id;
+        this.accounts = accounts;
     }
 
     public BankAccount search(long nr) throws AccountNotFoundException {
@@ -29,6 +43,12 @@ public class Bank {
 
     public void addAccount(BankAccount a) {
         this.accounts.add(a);
+    }
+
+    public void addAccounts(List<BankAccount> list){
+        for (BankAccount account : list){
+            addAccount(account);
+        }
     }
 
     public void transfer(BankAccount from, BankAccount to, int amount) {
@@ -55,6 +75,11 @@ public class Bank {
             total += account.getBalance();
         }
         return total;
+    }
+
+    @Override
+    public String toString(){
+        return ("Name: "+this.name+", Id: "+this.id+".");
     }
 
 }

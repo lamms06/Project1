@@ -1,6 +1,10 @@
 package h7h8.person;
 
+import java.util.Date;
 import java.util.Objects;
+
+//1. Take the Person class from H8 and overload the constructor with one to which you can pass all the
+//        fields of a Person. Use constructor chaining to avoid code duplication.
 
 public class Person {
     private String name;
@@ -13,6 +17,11 @@ public class Person {
         this.name = name;
         this.age = age;
         this.gender = Gender.UNKNOWN;
+    }
+
+    public Person(String name, int age, Gender gender){
+        this(name,age);
+        this.gender = gender;
     }
 
     public void setGender(Gender gender) {
@@ -53,4 +62,11 @@ public class Person {
     public int hashCode() {
         return Objects.hash(name, age, gender);
     }
+
+    @Override
+    protected void finalize()
+    {
+        System.out.println("finalize method called "+new Date().getTime());
+    }
+
 }
