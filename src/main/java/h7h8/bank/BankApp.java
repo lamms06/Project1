@@ -6,11 +6,11 @@ public class BankApp {
         Bank bank = new Bank("Rabobank");
 
         try {
-
+            //
         } catch (AccountNotFoundException ex) {
-
+            //
         } finally {
-
+            //
 
         }
 
