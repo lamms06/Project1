@@ -14,15 +14,15 @@ public class Bank {
     }
 
     public Bank(String name) {
-        this(name,0,null);
+        this(name,0,new ArrayList<>());
     }
 
     public Bank(long id) {
-        this("", id,null);
+        this("", id,new ArrayList<>());
     }
 
     public Bank(String name, long id){
-        this(name, id, null);
+        this(name, id, new ArrayList<>());
     }
 
     public Bank(String name, long id, List<BankAccount> accounts){
@@ -38,7 +38,7 @@ public class Bank {
             }
         }
 
-        throw new AccountNotFoundException("Account met nummer " + nr + " is niet gevonden!");
+        throw new AccountNotFoundException("AccountNotFound: "+nr);
     }
 
     public void addAccount(BankAccount a) {
@@ -46,9 +46,7 @@ public class Bank {
     }
 
     public void addAccounts(List<BankAccount> list){
-        for (BankAccount account : list){
-            addAccount(account);
-        }
+        this.accounts.addAll(list);
     }
 
     public void transfer(BankAccount from, BankAccount to, int amount) {
@@ -79,7 +77,7 @@ public class Bank {
 
     @Override
     public String toString(){
-        return ("Name: "+this.name+", Id: "+this.id+".");
+        return ("Name: "+name+", Id: "+id+", Accounts: "+accounts.size()+", Details: "+"\n"+accountsToString());
     }
 
 }
