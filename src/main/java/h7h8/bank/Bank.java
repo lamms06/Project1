@@ -45,8 +45,6 @@ public class Bank {
         }
         sb.append("Total is: ");
         sb.append(getTotal());
-        sb.append("\n");
-        sb.append("\n");
 
         return sb.toString();
     }
