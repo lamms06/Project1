@@ -9,9 +9,6 @@ public class BankAccount {
         this.accountNumber = id;
     }
 
-    /**
-     * @return the amount if withdrawal is permitted, 0 otherwise.
-     */
     public int withdraw(int amount) {
         if (this.getBalance() - amount > 0) {
             setBalance(-amount);
