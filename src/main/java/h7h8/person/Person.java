@@ -1,17 +1,18 @@
 package h7h8.person;
 
+import h10.Human;
+
 import java.util.Date;
 import java.util.Objects;
 
-//1. Take the Person class from H8 and overload the constructor with one to which you can pass all the
-//        fields of a Person. Use constructor chaining to avoid code duplication.
-
-public class Person {
+public class Person extends Human {
     private String name;
     private int age;
     private Gender gender;
 
     public static final int numberOfPossibleGenders = Gender.values().length;
+
+    public Person(){}
 
     public Person(String name, int age) {
         this.name = name;
@@ -67,6 +68,11 @@ public class Person {
     protected void finalize()
     {
         System.out.println("finalize method called "+new Date().getTime());
+    }
+
+    @Override
+    public String greet(){
+        return "Hello, my name is "+name+". Nice to meet you!";
     }
 
 }
