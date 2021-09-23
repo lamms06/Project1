@@ -21,7 +21,7 @@ public class StringAdder {
 
         for (String part : parts) {
             int number = processValidNumber(part);
-            sum = sum + filterUnwantedNumbers(number);
+            sum += filterUnwantedNumbers(number);
         }
         checkForNegatives();
         return sum;
