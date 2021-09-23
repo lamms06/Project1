@@ -11,10 +11,11 @@ public class BankAccount {
 
     public int withdraw(int amount) {
         if (this.getBalance() - amount > 0) {
-            setBalance(-amount);
+            setBalance(-amount); // dit is verwarrend; bij een setter is het gebruikelijk c.q. te verwachten dat je een waarde overschrijft, maar jij gaat hem bijwerken
+                                 // je zu dan beter, naast de normale setter, een nieuwe methode kunnen maken, bijv. updateBalance(..)
             return amount;
         } else {
-            return 0;
+            return 0; // is 0 wel een goede "foutcode"? wat nou als je 100 euro opneemt terwijl je balance 100 was?
         }
     }
 
