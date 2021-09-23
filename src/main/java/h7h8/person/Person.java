@@ -1,7 +1,17 @@
 package h7h8.person;
 
+/*
+        Take the Person class from H10. Create a private inner class in Person, HistoryRecord, with one
+        attribute String description, a constructor to initialize the description, and override toString() to
+        return the description.
+        3. Create the method public void addHistory(String descr) in Person, which creates a history
+        record with the given description and adds this record to an array in the first free spot. For managing
+        the array, you will need a counter to indicate the current free position in the array
+*/
+
 import h10.Human;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
@@ -9,6 +19,10 @@ public class Person extends Human {
     private String name;
     private int age;
     private Gender gender;
+    private HistoryRecord[] records;
+    public int recordcount = 0;
+    public static final int MAX_VALUE = 10;
+    public static final int MAX_RECORDS=10;
 
     public static final int numberOfPossibleGenders = Gender.values().length;
 
@@ -18,11 +32,25 @@ public class Person extends Human {
         this.name = name;
         this.age = age;
         this.gender = Gender.UNKNOWN;
+        this.records = new HistoryRecord[MAX_VALUE];
     }
 
     public Person(String name, int age, Gender gender){
         this(name,age);
         this.gender = gender;
+    }
+
+    private class HistoryRecord {
+        private String description;
+
+        public HistoryRecord(String description){
+            this.description = description;
+        }
+
+        @Override
+        public String toString(){
+            return description;
+        }
     }
 
     public void setGender(Gender gender) {
@@ -40,6 +68,19 @@ public class Person extends Human {
 
     public int getAge() {
         return age;
+    }
+
+    public void addHistory(String descr){
+        //if (recordcount == 9) recordcount = 0; //Voor als je oudere records wil kunnen overschrijven zodra MAX_RECORDS bereikt is.
+        HistoryRecord record = new HistoryRecord(descr);
+        records[recordcount]=record;
+        recordcount +=1;
+    }
+
+    public void printHistory(){
+        for (int i = 0; i < recordcount; i++) {
+            System.out.println(records[i]);
+        }
     }
 
     @Override
