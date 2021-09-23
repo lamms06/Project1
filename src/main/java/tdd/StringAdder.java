@@ -5,18 +5,15 @@ import java.util.List;
 
 public class StringAdder {
 
-    //int sum = 0;
+    int sum = 0;
     List<Integer> negatives = new ArrayList<>();
 
     public int add(String numbers) throws NegativesNotAllowedException {
-
         if(numbers == null || numbers.isBlank()) return 0;
-
         return processNumbers(numbers);
     }
 
     private int processNumbers(String numbers) throws NegativesNotAllowedException {
-        int sum = 0;
         String[] parts = getSeparateEntries(numbers);
 
         for (String part : parts) {
@@ -53,6 +50,5 @@ public class StringAdder {
             //throw new IllegalArgumentException("Dit is geen nummer: "+ numbers);
             return 0;
         }
-        //return 0;
     }
 }

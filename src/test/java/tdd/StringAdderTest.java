@@ -7,42 +7,42 @@ import static org.junit.Assert.assertEquals;
 public class StringAdderTest {
 
     @Test
-    public void testStringAdder_GetsNull_ReturnsZero() throws NegativesNotAllowedException {
+    public void testStringAdder_Null_ReturnsZero() throws NegativesNotAllowedException {
         StringAdder adder = new StringAdder();
         int zero = adder.add(null);
         assertEquals(0,zero);
     }
 
     @Test
-    public void testStringAdder_GestEmptyString_ReturnsZero() throws NegativesNotAllowedException {
+    public void testStringAdder_EmptyString_ReturnsZero() throws NegativesNotAllowedException {
         StringAdder adder = new StringAdder();
         int zero = adder.add("");
         assertEquals(0,zero);
     }
 
     @Test
-    public void testStringAdder_GetsSinglenumber_ReturnsNumber() throws NegativesNotAllowedException {
+    public void testStringAdder_SingleNumber_ReturnsNumber() throws NegativesNotAllowedException {
         StringAdder adder = new StringAdder();
         int one = adder.add("1");
         assertEquals(1,one);
     }
 
     @Test
-    public void testStringAdder_GetsMultipleNumbersWithCommas_ReturnsSum() throws NegativesNotAllowedException {
+    public void testStringAdder_MultipleNumbersWithCommas_ReturnsSum() throws NegativesNotAllowedException {
         StringAdder adder = new StringAdder();
         int numbers = adder.add("1,2,3");
         assertEquals(6,numbers);
     }
 
     @Test
-    public void testStringAdder_GetsMultipleNumbersWithCommasAndNewlines_ReturnsSum() throws NegativesNotAllowedException {
+    public void testStringAdder_MultipleNumbersWithCommasAndNewlines_ReturnsSum() throws NegativesNotAllowedException {
         StringAdder adder = new StringAdder();
         int numbers = adder.add("1\n2,3");
         assertEquals(6,numbers);
     }
 
     @Test
-    public void testStringAdder_GetsMultipleNumbersMultipleDelimiters_ReturnsSum() throws NegativesNotAllowedException {
+    public void testStringAdder_MultipleNumbersMultipleDelimiters_ReturnsSum() throws NegativesNotAllowedException {
         StringAdder adder = new StringAdder();
         int numbers = adder.add("1\n2;3");
         assertEquals(6,numbers);
