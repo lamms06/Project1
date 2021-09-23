@@ -9,7 +9,7 @@ public class StringAdder {
     List<Integer> negatives = new ArrayList<>();
 
     public int add(String numbers) throws NegativesNotAllowedException {
-        if(numbers == null || numbers.isBlank()) return 0;
+        if(numbers == null) return 0;
         return processNumbers(numbers);
     }
 
