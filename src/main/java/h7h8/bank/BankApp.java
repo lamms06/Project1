@@ -5,6 +5,8 @@ import java.util.List;
 
 public class BankApp {
 
+    // netjes.
+
     public void start() {
         Bank bank = new Bank("Rabobank", 1);
         System.out.println(bank);
