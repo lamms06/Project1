@@ -6,8 +6,19 @@ public class RegularCard extends Card{
         super();
     }
 
+    public RegularCard(int cardId, int credit, String name){
+        super(cardId,credit,name);
+    }
+
     public boolean pay(int x){
-        //
-        return true;
+        if(x<=this.credit){
+            this.credit -=x;
+            return true;
+        }
+        return false;
+    }
+
+    public int getId(){
+        return this.cardId;
     }
 }

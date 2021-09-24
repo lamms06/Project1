@@ -22,7 +22,7 @@ public abstract class Card {
     int cardId;
     double credit;
     String name;
-    String adress;
+    String address;
     String city;
 
     public Card(){
@@ -35,12 +35,19 @@ public abstract class Card {
         this.name = name;
     }
 
-    public Card(int cardId, double credit, String name, String adress, String city){
+    public Card(int cardId, double credit, String name, String address, String city){
         this(cardId, credit, name);
-        this.adress = adress;
+        this.address = address;
         this.city = city;
     }
 
     public abstract boolean pay(int amount);
+
+    public abstract int getId();
+
+    @Override
+    public String toString() {return (""+cardId + "     "+ name + "     " + credit);}
+
+
 
 }

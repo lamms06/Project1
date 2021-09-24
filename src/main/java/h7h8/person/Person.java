@@ -1,12 +1,8 @@
 package h7h8.person;
 
 /*
-        Take the Person class from H10. Create a private inner class in Person, HistoryRecord, with one
-        attribute String description, a constructor to initialize the description, and override toString() to
-        return the description.
-        3. Create the method public void addHistory(String descr) in Person, which creates a history
-        record with the given description and adds this record to an array in the first free spot. For managing
-        the array, you will need a counter to indicate the current free position in the array
+ Create the method public Human createSubHuman() in Person, which creates a Human-object using
+an anonymous class, with the greeting "Sub is the best."
 */
 
 import h10.Human;
@@ -39,6 +35,10 @@ public class Person extends Human {
         this(name,age);
         this.gender = gender;
     }
+
+/*    public Human createSubHuman(){
+       // ??
+    }*/
 
     private class HistoryRecord {
         private String description;
