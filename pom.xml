@@ -35,10 +35,24 @@
             <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
+
+<!--        <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-maven</artifactId>
+            <version>1.7.0</version>
+        </dependency>-->
+
     </dependencies>
+
 
     <!--    build-->
     <build>
-
+        <plugins>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.7.0</version>
+            </plugin>
+        </plugins>
     </build>
 </project>
