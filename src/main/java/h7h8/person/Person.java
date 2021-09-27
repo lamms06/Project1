@@ -36,10 +36,6 @@ public class Person extends Human {
         this.gender = gender;
     }
 
-/*    public Human createSubHuman(){
-       // ??
-    }*/
-
     private class HistoryRecord {
         private String description;
 
