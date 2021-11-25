@@ -34,6 +34,8 @@ public class App {
 
 
     public static void main(String[] args) {
+        String strClassPath = System.getProperty("java.class.path");
+        System.out.println("classpath is: "+ strClassPath);
         Weld weld = new Weld();
         WeldContainer weldContainer = weld.initialize(); // de engine/container
         App app = weldContainer.select(App.class).get(); // vanaf hier kan ik in marktplaats.App en zijn dependencies (marktplaats.dao) @Inject gebruiken.
@@ -61,11 +63,11 @@ public class App {
 
             /*geavanceerd zoeken (naam, Prijs, soort, Categorie) */
 
-        SearchObject object = new SearchObject(null, 100 , null, ArtikelCategorie.BOEKEN);
-        productService.advancedSearch(object);
+       // SearchObject object = new SearchObject(null, 100 , null, ArtikelCategorie.BOEKEN);
+       // productService.advancedSearch(object);
 
             /*Artikelen aan winkelwagen toevoegen*/
-       // winkelwagenDao.addArtikelToNewCart(48);
+        //winkelwagenDao.addArtikelToNewCart(48);
        // winkelwagenDao.addArtikelToExistingCart(45, 67); //48
 
         //productService.findAll();

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Blok1/Blok1.iml" filepath="$PROJECT_DIR$/Blok1/Blok1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Blok2/Blok2.iml" filepath="$PROJECT_DIR$/Blok2/Blok2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb/JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JaxRestApp/JaxRestApp.iml" filepath="$PROJECT_DIR$/JaxRestApp/JaxRestApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyWebApp/MyWebApp.iml" filepath="$PROJECT_DIR$/MyWebApp/MyWebApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/case.marktplaats/case.marktplaats.iml" filepath="$PROJECT_DIR$/case.marktplaats/case.marktplaats.iml" />
+    </modules>
+  </component>
+</project>

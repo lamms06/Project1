@@ -32,6 +32,7 @@ public class Winkelwagen {
     @OneToMany(targetEntity = Artikel.class)
     public List<Artikel> producten;
 
+    /* LocalDateTime, OffsetDateTime, ZonedDateTime*/
     private Timestamp timestamp;
 
     public void setTimestamp(Timestamp timestamp){

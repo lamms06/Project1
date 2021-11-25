@@ -20,6 +20,7 @@ public class ProductService {
         this.em = em;
     }
 
+    /*static, geen instantie*/
     @Inject
     Util util;
 

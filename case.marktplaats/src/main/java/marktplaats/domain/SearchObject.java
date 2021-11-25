@@ -7,25 +7,25 @@ public class SearchObject {
     private ProductSoort soort;
     private ArtikelCategorie categorie;
 
-    public SearchObject(){
+    public SearchObject() {
         //
     }
 
-    public SearchObject(String naam){
+    public SearchObject(String naam) {
         this.naam = naam;
     }
 
-    public SearchObject(String naam, double prijs){
+    public SearchObject(String naam, double prijs) {
         this(naam);
         this.prijs = prijs;
     }
 
-    public SearchObject(String naam, double prijs, ProductSoort soort){
+    public SearchObject(String naam, double prijs, ProductSoort soort) {
         this(naam, prijs);
         this.soort = soort;
     }
 
-    public SearchObject(String naam, double prijs, ProductSoort soort,ArtikelCategorie categorie){
+    public SearchObject(String naam, double prijs, ProductSoort soort, ArtikelCategorie categorie) {
         this(naam, prijs, soort);
         this.categorie = categorie;
     }
@@ -39,19 +39,19 @@ public class SearchObject {
         return naam;
     }
 
-    public double getPrijs(){
+    public double getPrijs() {
         return prijs;
     }
 
-    public ProductSoort getSoort(){
+    public ProductSoort getSoort() {
         return soort;
     }
 
-    public void setSoort(ProductSoort soort){
+    public void setSoort(ProductSoort soort) {
         this.soort = soort;
     }
 
-    public ArtikelCategorie getCategorie(){
+    public ArtikelCategorie getCategorie() {
         return categorie;
     }
 }

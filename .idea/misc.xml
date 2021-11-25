@@ -3,6 +3,9 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/case.marktplaats" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaRestApp" />
+    <file type="web" url="file://$PROJECT_DIR$/MyWebApp" />
+    <file type="web" url="file://$PROJECT_DIR$/webapp" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -14,6 +17,10 @@
       <set>
         <option value="$PROJECT_DIR$/Blok1/pom.xml" />
         <option value="$PROJECT_DIR$/Blok2/pom.xml" />
+        <option value="$PROJECT_DIR$/JaxRestApp/pom.xml" />
+        <option value="$PROJECT_DIR$/MyWebApp/pom.xml" />
+        <option value="$PROJECT_DIR$/case.marktplaats/pom.xml" />
+        <option value="$PROJECT_DIR$/webapp/pom.xml" />
       </set>
     </option>
   </component>

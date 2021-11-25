@@ -8,13 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Blok2" />
-        <module name="case.marktplaats" />
+        <module name="JavaRestApp" />
         <module name="Blok1" />
+        <module name="MyWebApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Blok1" target="11" />
       <module name="Blok2" target="11" />
+      <module name="case.marktplaats" target="11" />
+      <module name="JaxRestApp" target="1.7" />
+      <module name="MyWebApp" target="1.7" />
+      <module name="webapp" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-
+/*static, geen instantie*/
 public class Util {
 
     @Inject

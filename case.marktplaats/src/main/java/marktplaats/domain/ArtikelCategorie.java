@@ -1,5 +1,7 @@
 package marktplaats.domain;
 
+/* Entity */
+
 public enum ArtikelCategorie {
     BOEKEN,
     MULTIMEDIA,
