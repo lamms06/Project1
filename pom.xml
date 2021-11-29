@@ -15,7 +15,6 @@
         <module>case.marktplaats</module>
         <module>MyWebApp</module>
         <module>JavaRestApp</module>
-        <module>JaxRestApp</module>
     </modules>
 
     <properties>
