@@ -1,6 +1,6 @@
 package nl.belastingdienst.servlet;
 
-import domain.Person;
+import rest.app.domain.Person;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

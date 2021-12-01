@@ -1,4 +1,4 @@
-package util;
+package rest.util;
 
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.core.Response;
@@ -10,7 +10,7 @@ import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 @Provider
 public class BadRequestExceptionMapper implements ExceptionMapper<BadRequestException> {
 
-    // Als er ergens in mijn JAX-RS-app een BadRequestException optreedt
+    // Als er ergens in mijn JAX-RS-rest.app een BadRequestException optreedt
     // vang ik hem hier af:
     @Override
     public Response toResponse(BadRequestException ex) {

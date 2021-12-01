@@ -1,4 +1,4 @@
-package util;
+package rest.util;
 
 import javax.ws.rs.BadRequestException;
 

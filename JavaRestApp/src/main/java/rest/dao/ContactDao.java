@@ -1,19 +1,15 @@
-package dao;
+package rest.dao;
 
-import domain.Contact;
+import rest.domain.Contact;
 
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
-import javax.inject.Singleton;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import static javax.ejb.TransactionAttributeType.REQUIRED;
-import static util.Responses.throwBadRequest;
 
 // @ApplicationScoped // Managed CDI bean, dus geen super powers
 @Stateless //            Managed Enterprise Java Bean (EJB): hij krijgt super powers (zoals transaction capabilities).

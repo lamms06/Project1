@@ -1,5 +1,4 @@
-package domain;
-
+package rest.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package filters;
+package rest.filters;
 
 import javax.ws.rs.ext.Provider;
 

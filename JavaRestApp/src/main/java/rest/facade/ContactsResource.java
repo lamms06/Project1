@@ -1,19 +1,18 @@
-package facade;
+package rest.facade;
 
-import dao.ContactDao;
-import domain.Contact;
+import rest.dao.ContactDao;
+import rest.domain.Contact;
+import org.eclipse.microprofile.openapi.annotations.Operation;
 
-import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
-import static util.Responses.badRequest;
+import static rest.util.Responses.badRequest;
 
 
 @Path("contacts")
-//@RequestScoped
 public class ContactsResource {
 
     @Inject
@@ -34,6 +33,7 @@ public class ContactsResource {
 
     @GET @Path("{q}")
     @Produces(MediaType.APPLICATION_JSON)
+    @Operation(description = "Gets all contacts or filtered by q.")
     public List<Contact> get(@PathParam("q")String q){
         return contactDao.getContacts(q);//.orElseThrow(() ->badRequest(q));
     }
